@@ -26,6 +26,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
 }
 
 repositories {
@@ -35,5 +41,5 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.23"
-    compileOnly files('libs/api-82.jar') // pakai path manual
+    compileOnly files('libs/api-82.jar')
 }
