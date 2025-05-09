@@ -7,11 +7,29 @@ import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 class HookEntry : IXposedHookLoadPackage {
+    // Deklarasi fungsi native
+    external fun checkHookStatus(): Boolean
+    external fun forceRefreshHook(): Boolean
+    external fun dumpSystemProperties()
+    
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
         // Load native .so
         try {
             System.loadLibrary("spoof")
             XposedBridge.log("SpoofModule: Native lib loaded")
+            
+            // Cek status hook native
+            val hookActive = checkHookStatus()
+            if (hookActive) {
+                XposedBridge.log("SpoofModule: Native hook berhasil diaktifkan")
+                
+                // Dump properti sistem untuk debugging jika perlu
+                // dumpSystemProperties()
+            } else {
+                XposedBridge.log("SpoofModule: Native hook belum aktif, mencoba refresh")
+                val refreshResult = forceRefreshHook()
+                XposedBridge.log("SpoofModule: Hasil refresh hook: ${if(refreshResult) "sukses" else "gagal"}")
+            }
         } catch (e: Throwable) {
             XposedBridge.log("SpoofModule: Failed to load native lib – ${e.message}")
         }
@@ -21,7 +39,7 @@ class HookEntry : IXposedHookLoadPackage {
             "BRAND" to "samsung",
             "MANUFACTURER" to "samsung",
             "DEVICE" to "dm3q",
-            "PRODUCT" to "dm3qxx",
+            "PRODUCT" to "dm3qxx", 
             "MODEL" to "SM-S928B",
             "FINGERPRINT" to "samsung/dm3qxx/dm3q:14/UP1A.231005.007/S928BXXU1AXB5:user/release-keys",
             "BOARD" to "kalama",
