@@ -27,12 +27,6 @@ android {
         jvmTarget = '1.8'
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['src/main/jniLibs']
-        }
-    }
-}
 
 repositories {
     google()
