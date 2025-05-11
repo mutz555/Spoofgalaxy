@@ -8,15 +8,12 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 class HookEntry : IXposedHookLoadPackage {
 
-    // Daftar properti SoC dan device Galaxy S24 Ultra (Snapdragon 8 Gen 3)
     private val spoofedProps = mapOf(
-        // Device & Brand
         "ro.product.manufacturer" to "samsung",
         "ro.product.brand" to "samsung",
         "ro.product.model" to "SM-S928B",
         "ro.product.name" to "gts9ultexx",
         "ro.product.device" to "gts9ultra",
-        // Snapdragon 8 Gen 3 properties
         "ro.hardware.chipset" to "Snapdragon 8 Gen 3",
         "ro.hardware.chipname" to "SM8650-AC",
         "ro.chipname" to "SM8650-AC",
@@ -27,6 +24,10 @@ class HookEntry : IXposedHookLoadPackage {
     )
 
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
+        // Biar cuma nge-hook app utama, bukan proses system
+        if (!lpparam.isFirstApplication) return
+
+        XposedBridge.log("SpoofModule: Hooking into ${lpparam.packageName}")
 
         try {
             val clazz = XposedHelpers.findClass("android.os.SystemProperties", lpparam.classLoader)
@@ -54,6 +55,7 @@ class HookEntry : IXposedHookLoadPackage {
             })
 
             XposedBridge.log("SpoofModule: Java SystemProperties hook applied!")
+
         } catch (e: Throwable) {
             XposedBridge.log("SpoofModule: Failed to hook SystemProperties – ${e.message}")
         }
