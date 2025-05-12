@@ -1,0 +1,353 @@
+# This file will be read by resetprop
+# Example: Change dpi
+# ro.sf.lcd_density=320
+
+# Galaxy S24 Ultra US Unlocked
+ro.product.brand=samsung
+ro.product.manufacturer=samsung
+ro.product.device=e3q
+ro.product.model=SM-S928U1
+ro.product.odm.model=SM-S928U1
+ro.product.vendor.model=SM-S928U1
+ro.product.system.model=SM-S928U1
+ro.product.system_ext.model=SM-S928U1
+ro.product.marketname=Galaxy S24 Ultra US Unlocked
+ro.product.name=Galaxy S24 Ultra US Unlocked
+
+# Debug Touchscreen and Performance Settings
+debug.tracing.block_touch_buffer=1
+debug.touchscreen.latency.scale=0.5
+debug.touchscreen.input_delay=10
+debug.touchscreen.speed_mode=1
+debug.touchscreen.latency_scale=0.5
+debug.performance.animations=false
+debug.touchscreen.ultra_fast=1
+
+# Tweak untuk meningkatkan responsivitas layar sentuh
+persist.sys.ui.config=multiTouch
+ro.config.touchscreen.max.fingers=10
+persist.sys.touchscreen.sensitivity=100
+debug.touchscreen.timing=1
+persist.sys.touchscreen.test_mode=0
+debug.touchscreen.enable_tslinux=1
+persist.sys.touchscreen.downgrade_mode=0
+dev.pm.dyn_samplingrate=true
+
+# Menonaktifkan animasi untuk kinerja lebih cepat
+persist.sys.anim.scale=0
+persist.sys.window_animation_scale=0
+persist.sys.transition_animation_scale=0
+
+# Mengurangi delay sentuhan dan meningkatkan kinerja
+persist.sys.input_delay=5
+persist.sys.touchscreen.optimization=true
+persist.sys.touchscreen.boost=1
+
+# --- V-sync Settings ---
+debug.vsync.max_fps=120
+
+# --- CPU Settings ---
+debug.cpu.performance_mode=1
+debug.cpu.performance_boost=true
+debug.cpu_perf_event_sampling=true
+debug.cpu_perf_event_sampling_rate=250
+debug.cpu_perf_event_max_sample_rate=250
+
+# --- QTI Settings --- 
+debug.snapdragon.fps_boost=1
+debug.snapdragon.performance_mode=1
+
+# --- RAM Settings ---
+debug.memory.optimization=1
+debug.memory_perf_event_sampling=true
+
+# --- FPS & Frame Rate ---
+debug.fps=120
+debug.fps.limit=120
+debug.frame_rate.max=120
+debug.frame_rate.min=120
+debug.frame_rate_smoothing=true
+debug.frame_rate.vsync=0
+debug.frame_rate.adaptive=1
+debug.fps.target=120
+debug.fps.max=120
+debug.fps.min=120
+debug.fps.control=false
+debug.fps.optimization=true
+
+# --- Thermal Refresh Rate ---
+debug.thermal.refresh_rate=120
+debug.thermal.refresh_rate_limit=120
+debug.thermal.dynamic_control=false
+debug.thermal.max_fps=120
+debug.thermal.min_fps=120
+
+# --- Frame Rate (Rendering) untuk Pengoptimalan ---
+debug.renderthread.framerate=120
+debug.render.fps=120
+debug.render.detail_fps=120
+debug.render.smooth_fps=1
+
+# --- Sys Settings ---
+sys.fps_unlock_allowed=120
+sys.fps.default=120
+sys.fps.override=120
+sys.fps.min=120
+sys.fps.max=120
+sys.fps.dynamic_range=120
+sys.thermal.refresh_rate=120
+sys.thermal.max_fps=120
+sys.thermal.performance_mode=1
+sys.thermal.cooling_mode=1
+sys.touch.sampling_rate=250
+sys.touchscreen.max_sampling_rate=250
+sys.touchscreen.min_sampling_rate=250
+sys.touchscreen.sampling_resolution=250
+sys.display.refresh_rate=120
+sys.display.dynamic_refresh_rate=false
+sys.display.refresh_rate_limit=120
+sys.touch.refresh_rate=120
+sys.touch.max_sampling_rate=250
+sys.touch.min_sampling_rate=250
+sys.touch.sensitivity=1
+sys.touch.haptic_feedback=true
+
+# --- Persist Settings ---
+persist.sys.fps_limit=120
+persist.sys.max_fps=120
+persist.sys.frame_rate_smoothing=true
+persist.sys.frame_rate.vsync=0
+persist.sys.frame_rate.adaptive=1
+persist.sys.thermal.refresh_rate=120
+persist.sys.thermal.max_refresh_rate=120
+persist.sys.thermal.performance_boost=true
+persist.sys.thermal.performance_mode=1
+persist.sys.touch.sampling_rate=120
+persist.sys.touchscreen.max_sampling_rate=250
+persist.sys.touchscreen.min_sampling_rate=250
+persist.sys.display.dynamic_refresh_rate=false
+persist.sys.display.max_refresh_rate=120
+persist.sys.display.refresh_rate_override=120
+persist.sys.touch.refresh_rate=250
+persist.sys.touch.sampling_rate=250
+persist.sys.touch.sensitivity=1
+persist.sys.touch.sampling_resample_rate=250
+persist.sys.touchscreen.sampling_rate=250
+persist.sys.display.refresh_rate=120
+persist.game.minfps=120
+persist.game.maxfps=120
+
+# --- FPS Cap ---
+debug.fps.cap=120
+debug.gpu.fps.cap=120
+
+# --- Frame Rate Cap ---
+debug.frame_rate.cap=120
+debug.frame_rate.max=120
+
+# --- Refresh Rate Cap ---
+debug.display.refresh_rate.cap=60
+debug.display.refresh_rate.limit=90
+
+# --- Touch Sampling Rate Cap ---
+debug.touch.sampling_rate.cap=250
+debug.touchscreen.sampling_rate.cap=250
+
+# --- GPU Performance Cap ---
+debug.gpu.performance_cap=80
+
+# --- CPU Performance Cap ---
+debug.cpu.performance_cap=75
+
+# --- Gpu Settings ---
+debug.gpu.overclock=1
+debug.gpu.hw_acceleration=1
+debug.gpu.ui_render=1
+debug.gpu.ui_refresh_rate=120
+debug.gpu.performance_mode=1
+debug.gpu.refresh_rate=120
+debug.gpu.fps_boost=1
+
+# --- Render Settings ---
+debug.renderthread.framerate=120
+
+# --- HWUI Settings ---
+debug.hwui.fps_divisor=-1
+debug.hwui.force_refresh_rate=120
+debug.hwui.refresh_rate_forced=120
+debug.hwui.profile.maxframes=120
+debug.hwui.min_fps=120
+debug.hwui.frame_rate_multiple=120
+debug.hwui.max_frames=120
+debug.hwui.detail_fps=120
+debug.hwui.animation_fps=120
+
+# --- Touch Input Settings ---
+debug.touch.refresh_rate=250
+debug.touch.sync=false
+debug.input.touch_sampling_rate=250
+debug.input.touch_refresh_rate=120
+debug.input.touch_sensitivity=1
+debug.touch.sampling_rate=250
+debug.touch.resample_rate=250
+debug.touchscreen.sampling_rate=250
+debug.touchscreen.max_sampling_rate=250
+debug.touchscreen.min_sampling_rate=250
+debug.touch.sampling_rate_max=250
+debug.touch.sampling_rate_min=250
+debug.touch.sampling_event_rate=250
+debug.touch.sample_interval=2ms
+
+# --- EGL Settings ---
+debug.egl.render_fps=120
+debug.egl.refresh_rate=120
+debug.egl.fps=120
+debug.egl.framerate=120
+debug.egl.refresh_rate=120
+debug.egl.sampling_rate=250
+debug.egl.detail_fps=120
+
+# --- SurfaceFlinger (SF) Settings ---
+debug.sf.fps=120
+debug.sf.frame_rate=120
+debug.sf.hw_rotation_fps_divisor=-1
+debug.sf.120hz_mode=1
+debug.sf.hwui.fps=120
+debug.sf.hwui.framerate=120
+debug.sf.hwui.refresh_rate=120
+debug.sf.hwui.sampling_rate=250
+debug.sf.hwui.render_fps=120
+debug.sf.hwui.update_rate=120
+debug.sf.hwui.detail_fps=120
+debug.sf.hwui_refresh_rate=120
+debug.sf.hwui_max_fps=120
+debug.sf.hwui_min_fps=120
+debug.sf.hwui_force_refresh_rate=120
+debug.sf.hwui_frame_rate=120
+debug.sf.hwui_frame_rate_multiple=120
+debug.sf.hwui_fps_boost=120
+debug.sf.hwui_fps_throttle=120
+debug.sf.frame_rate_multiple_fences=120
+debug.sf_frame_rate_multiple_fences=120
+debug.sf.frame_rate_multiple_threshold=120
+debug.sf.late_vsync_threshold=120
+
+# --- Graphics Renderer (GR) Settings ---
+debug.gr.render_fps=120
+debug.gr.fps=120
+debug.gr.framerate=120
+debug.gr.refresh_rate=120
+debug.gr.sampling_rate=250
+debug.gr.render_fps=120
+debug.gr.update_rate=120
+debug.gr.detail_fps=120
+
+# --- Display Settings ---
+debug.display.min_refresh_rate=120
+debug.display.peak_refresh_rate=120
+debug.display.refresh_rate_min=120
+debug.display.refresh_rate_max=120
+debug.display.refresh_rate_for_fps_boost=120
+debug.display.max_refresh_rate=120
+debug.display.allow_non_native_refresh_rate_override=0
+debug.display.refresh_rate=120
+debug.display.dynamic_refresh_rate=false
+
+# --- JavaFX Animation Settings ---
+debug.javafx.animation.fullspeed=1
+debug.javafx.animation.framerate=120
+
+# --- MediaTek Specific Settings ---
+debug.fps=120
+debug.mediatek.high_frame_rate_sf_set_big_core_fps_threshold=120
+
+# --- OVR (Overlays) Manager Settings ---
+debug.OVRManager.cpuLevel=2
+debug.OVRManager.gpuLevel=2
+debug.OVRPlugin.systemDisplayFrequency=120
+
+# --- Frame Rate Settings ---
+debug.frame_rate.target=120
+debug.frame_rate.sync=false
+debug.frame_rate.limit=true
+debug.frame_rate.dynamic_scaling=false
+debug.frame_rate.frame_pacing=true
+debug.frame_rate.gpu_tuning=true
+debug.frame_rate_sample_rate=250
+debug.frame_rate_max_sample_rate=250
+debug.frame_rate_dynamic_sample=false
+debug.frame_rate_event_sampling=true
+
+# --- Performance Event Settings ---
+debug.perf_event_max_sample_rate=250
+debug.perf_event_sample_rate=250
+debug.perf_event_sampling_enabled=true
+debug.perf_event_max_buffer_size=4096
+debug.perf_event_enable_all=true
+debug.perf_event_enable_vsync=false
+
+# --- Refresh Rate Override Settings ---
+debug.refresh_rate.view_override=1
+debug.refresh_rate.min_fps=120
+debug.refresh_rate.max_fps=120
+debug.refresh_rate.dynamic=false
+debug.refresh_rate.max_fps_lock=120
+debug.refresh_rate.min_fps_lock=120
+debug.refresh_rate.motion_smoothing=true
+debug.refresh_rate.vsync=false
+debug.refresh_rate.gpu_sync=false
+debug.refresh_rate.vsync_offset=0
+debug.refresh_rate.cpu_sync=false
+
+# --- Redroid Settings ---
+debug.redroid.fps=120
+
+# --- Stagefright Settings ---
+debug.stagefright.fps=120
+
+# --- Rendering Optimizations ---
+debug.fps.render.fast=1
+
+# --- Tweak untuk Game Frame Rate ---
+debug.game.fps_limit=120
+debug.game.framebuffer_rate=120
+debug.game.frame_rate_smoothing=1
+debug.game.enable_vsync=false
+debug.game.max_fps=120
+debug.game.force_gpu_rendering=true
+debug.game.enable_advanced_graphics=true
+debug.game.high_performance_mode=true
+debug.game.use_custom_rendering=true
+debug.game.disable_thermal_throttling=true
+debug.game.optimize_gpu=true
+
+# --- Tweak untuk Display Refresh Rate ---
+debug.display.dynamic_refresh_rate=false
+debug.display.fixed_refresh_rate=120
+
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.hardware.chipname=SM8650-AC
+ro.chipname=SM8650-AC
+ro.soc.model=SM8650
+ro.vendor.soc.model.external_name=SM8650-AC
+ro.vendor.soc.model.part_name=SM8650-AC
+
+# FPs Stabilizer
+debug.sf.showupdates=0
+debug.sf.showcpu=0
+debug.sf.showbackground=0
+debug.sf.showfps=0
+
+# Fps Properties
+ro.fps_enable=0
+ro.fps.capsmin=120
+ro.fps.capsmax=120
+
+# System Properties
+cpu.fps=auto 
+gpu.fps=auto 
+
+#BootFps
+boot.fps=60
+shutdown.fps=60
